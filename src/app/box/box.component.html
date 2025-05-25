@@ -1,0 +1,6 @@
+<button class="box-btn" (click)="setValue()"
+  [ngStyle]="{ color: value() === 'X' ? 'blue' : value() === 'O' ? 'red' : 'black' }"
+  [disabled]="!isActive()"
+>
+  {{ value() }}
+</button>

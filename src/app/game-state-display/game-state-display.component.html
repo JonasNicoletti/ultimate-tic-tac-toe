@@ -1,0 +1,24 @@
+<div class="game-state-display">
+    @if (gameStore.started()) {
+    <button (click)="gameStore.resetGame()">Reset Game</button>
+    } @else {
+    <button (click)="gameStore.startGame()">Start Game</button>
+    }
+    <div>
+        <label>
+            <input type="radio" name="mode" [value]="'human'" [checked]="mode() === 'human'"
+                [disabled]="gameStore.started()" (change)="setMode('human')" />
+            vs Human
+        </label>
+        <label>
+            <input type="radio" name="mode" [value]="'ai'" [checked]="mode() === 'ai'" (change)="setMode('ai')"
+                [disabled]="gameStore.started()" />
+            vs AI
+        </label>
+    </div>
+</div>
+@if(gameStore.winner()) {
+<p>Winner: {{ gameStore.winner() }}</p>
+} @else {
+<p>Current Player: {{ gameStore.turn() }}</p>
+}

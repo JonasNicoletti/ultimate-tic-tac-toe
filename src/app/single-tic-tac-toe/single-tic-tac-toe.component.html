@@ -1,0 +1,16 @@
+<div class="tic-tac-toe-grid" [ngClass]="{'isActive': !isFreeMove() && boardState().isActive}">
+  @if (boardState().winner){
+  <ng-container>
+    <div class="winner-overlay" [ngStyle]="{ color: boardState().winner === 'X' ? 'blue' : boardState().winner === 'O' ? 'red' : 'black' }">{{ boardState().winner }}</div>
+  </ng-container>
+  }
+  @for (row of [0, 1, 2]; track row) {
+  <div class="tic-tac-toe-row">
+    @for (col of [0, 1, 2]; track col) {
+    <div class="tic-tac-toe-cell">
+      <app-box [position]="toPosition(row, col)" [board]="board()" [isActive]="isFreeMove() || boardState().isActive" />
+    </div>
+    }
+  </div>
+  }
+</div>

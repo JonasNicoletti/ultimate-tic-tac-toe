@@ -1,0 +1,36 @@
+.main-tic-tac-toe-grid {
+    margin: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 0;
+    width: 360px;
+    height: 3600px;
+}
+
+.main-tic-tac-toe-cell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background: #fafafa;
+}
+
+
+.main-tic-tac-toe-cell:nth-child(3),
+.main-tic-tac-toe-cell:nth-child(6),
+.main-tic-tac-toe-cell:nth-child(9) {
+  border-bottom: none;
+}
+.main-tic-tac-toe-cell:nth-child(7),
+.main-tic-tac-toe-cell:nth-child(8),
+.main-tic-tac-toe-cell:nth-child(9) {
+  border-right: none;
+}
+
+app-single-tic-tac-toe {
+    width: 120px;
+    height: 120px;
+}

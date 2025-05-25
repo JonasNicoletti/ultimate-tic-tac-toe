@@ -1,0 +1,11 @@
+button {
+ /* This is a button style for the box component */
+  background-color: transparent;
+  border: none; /* Remove borders */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from links */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  font-size: x-large;
+}	
