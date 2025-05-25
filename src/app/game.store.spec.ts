@@ -126,6 +126,6 @@ describe('GameStore', () => {
         store.setMode('ai');
         store.startGame();
         store.makeMove({ player: 'X', board: 1, position: 1 });
-        expect(store.moves().length).toBe(1);
+        expect(store.moves().length).toBe(2);
     })
 });
